@@ -1,0 +1,230 @@
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  padding: 0;
+  max-width: 425px;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  height: 38px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+header .hamburger {
+  width: 25px;
+  height: 15px;
+  margin-right: 6px;
+}
+
+.jumia-logo {
+  /* width: 80px; */
+  height: 15px;
+}
+
+.user-icon {
+  height: 18px;
+}
+
+.shopping-cart {
+  height: 18px;
+  margin-left: 10px;
+}
+
+.search-section {
+  padding: 0 5px;
+  margin: 0;
+  position: relative;
+}
+
+#search {
+  height: 25px;
+  padding: 5px 10px 5px 30px;
+  width: 100%;
+  border-radius: 13px;
+  border: 1px solid black;
+}
+
+#search::placeholder {
+  font-size: 10px;
+}
+
+.search-icon {
+  width: 15px;
+  position: absolute;
+  left: 15px;
+  top: 5px;
+}
+
+.header-and-search {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding-bottom: 5px;
+}
+
+.order-by-call {
+  background-color: rgb(255, 83, 20);
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.order-by-call p {
+  color: white;
+  font-size: 13px;
+}
+
+.promo-container {
+  max-width: 425px;
+  overflow-x: scroll;
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
+
+.promo {
+  width: 300px;
+}
+
+.somediv {
+  height: 5px;
+  width: 100%;
+  background-color: rgb(223, 219, 219);
+  margin-bottom: 5px;
+}
+
+.some-awoof {
+  max-width: 425px;
+  overflow-x: scroll;
+  display: flex;
+  gap: 10px;
+  padding-bottom: 20px;
+}
+
+.awoof-items {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.awoof-items small {
+  text-align: center;
+  font-size: 10px;
+  color: rgb(116, 115, 115);
+}
+
+.awoofs {
+  width: 80px;
+}
+
+.flash-sale {
+  height: 44px;
+  background-color: red;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flash-timer-container {
+  flex: 1;
+}
+
+.flash-timer-container h5 {
+  margin: 0;
+  color: white;
+  font-weight: 600;
+}
+
+.flash-timer-container small {
+  color: white;
+  font-size: 10px;
+  font-weight: 300;
+}
+
+
+.flash-image {
+  width: 20px;
+  margin-left: 12px;
+  margin-right: 10px;
+}
+.more-sales {
+  color: white;
+  align-self: self-start;
+  font-size: 12px;
+  margin: 5px 10px;
+  
+}
+
+/* navbar styles */
+
+.navbar-container {
+  max-width: 300px;
+  height: 100vh;
+  border: 1px solid red;
+  padding: 0 10px;
+}
+
+.close-menu {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border-bottom: 1px solid rgb(187, 186, 186);
+}
+.close {
+  width: 20px;
+}
+
+.need-help,
+.my-account,
+.my-account,
+.categories,
+.service  {
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  align-items: center;
+  margin: 0;
+}
+
+.need-help p,
+.my-account p,
+.my-account p,
+.categories p,
+.service p {
+  font-size: 10px;
+  color: gray;
+  font-weight: 400;
+  word-spacing: 1px;
+  margin: 0;
+}
+
+.need-help {
+  border-bottom: 1px solid rgb(187, 186, 186);
+}
+
+.navbar-container ul {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-container .see-all {
+  font-size: 9px;
+  color: rgb(246, 131, 89);
+}
+
+.categories, .service {
+  border-top: 1px solid rgb(187, 186, 186);
+}
