@@ -4,9 +4,29 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 body{
+  display: flex;
+  justify-content: center;
+}
+
+.main-page {
   padding: 0;
+  padding-bottom: 10px;
+  width: 100vw;
   max-width: 425px;
   margin: 0 auto;
+  /* position: relative; */
+}
+
+.backdrop {
+  display: none;
+}
+
+.showBackdrop {
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  background-color: rgb(128, 128, 128, 0.8);
 }
 
 header {
@@ -25,7 +45,6 @@ header .hamburger {
 }
 
 .jumia-logo {
-  /* width: 80px; */
   height: 15px;
 }
 
@@ -68,6 +87,7 @@ header .hamburger {
   top: 0;
   background-color: white;
   padding-bottom: 5px;
+  z-index: 5;
 }
 
 .order-by-call {
@@ -87,6 +107,7 @@ header .hamburger {
 .promo-container {
   max-width: 425px;
   overflow-x: scroll;
+  scrollbar-width: none;
   display: flex;
   gap: 8px;
   margin-top: 8px;
@@ -107,6 +128,7 @@ header .hamburger {
 .some-awoof {
   max-width: 425px;
   overflow-x: scroll;
+  scrollbar-width: none;
   display: flex;
   gap: 10px;
   padding-bottom: 20px;
@@ -170,10 +192,23 @@ header .hamburger {
 /* navbar styles */
 
 .navbar-container {
-  max-width: 300px;
+  max-width: 290px;
+  width: 290px;
   height: 100vh;
-  border: 1px solid red;
   padding: 0 10px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(-500px);
+  transition: transform 0.5s ease-in-out;
+  background-color: white;
+  z-index: 100;
+}
+
+.render-sideNavBar {
+  transform: translateX(0);
 }
 
 .close-menu {
@@ -218,6 +253,7 @@ header .hamburger {
 .navbar-container ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .navbar-container .see-all {
@@ -228,3 +264,317 @@ header .hamburger {
 .categories, .service {
   border-top: 1px solid rgb(187, 186, 186);
 }
+
+.icons {
+  width: 18px;
+}
+
+.icons-text{
+  font-size: 10px;
+  color: rgb(108, 107, 107);
+  font-weight: 500;
+}
+
+.navbar-container li {
+  height: 35px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+
+.do-more p {
+  font-size: 10px;
+  color: rgb(108, 107, 107);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.buy-data {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(187, 186, 186);
+}
+
+.flashSalesProduct-container {
+  display: flex;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  gap: 10px;
+  padding: 0 8px;
+  padding-bottom: 10px;
+}
+
+.flashSalesProduct-container .sales-items {
+  display: flex;
+  flex-direction: column;
+  width: 130px;
+}
+.flashSalesProduct-container .sales-image {
+  width: 130px;
+}
+
+.sales-items small {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 11px;
+}
+
+.sales-items .price {
+  margin: 0;
+  font-size: 14px;
+}
+
+.sales-items p,
+.sales-items small {
+  padding: 0 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.sales-items .progress {
+  height: 5px;
+  background-color: red;
+  border-radius: 5px;
+  margin: 0 4px;
+}
+
+/* bonus products styles */
+.bonusProductsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 5px;
+}
+
+.bonus .box {
+ height: 100px;
+ background-color: rgb(166, 166, 166);
+ border-radius: 5px;
+}
+
+.bonus>p {
+  font-size: 12px;
+  text-align: center;
+}
+
+/* sponsored products style */
+.spons-products {
+  display: flex;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  gap: 10px;
+  padding: 0 8px;
+  padding-bottom: 10px;
+}
+
+.spons-items {
+  width: 130px;
+  border: 1px solid gray;
+  flex-shrink: 0;
+}
+
+.spons-items .box {
+  width: 100%;
+  height: 150px;
+  background-color: gray;
+  margin-bottom: 5px;
+}
+
+.spons-items .spons-price {
+  margin: 10px 0;
+}
+
+/* top seller style section */
+.top-seller-header {
+  height: 30px;
+  background-color: green;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  margin-top: -5px;
+}
+
+.top-seller-header > p {
+ font-size: 13px;
+}
+
+.top-seller-header > small {
+  font-size: 10px;
+ }
+
+ .top-seller-prod {
+  display: flex;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  gap: 10px;
+  padding: 0 8px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+ }
+
+ /* top selling items styles */
+ .top-selling-header {
+  height: 30px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  margin-top: -5px;
+ }
+
+ .top-selling-header > p {
+  font-size: 13px;
+ }
+ 
+ .top-selling-header > small {
+   font-size: 10px;
+   color: goldenrod;
+  }
+
+  .top-selling-items {
+  display: flex;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  gap: 10px;
+  padding: 0 8px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  }
+
+  .grandSect > div:last-child {
+    height: 15px;
+    margin-bottom: 0;
+    opacity: 0.5;
+  }
+
+  /* some description about jumia */
+  .company-description {
+    padding: 15px;
+    height: 180px;
+    overflow: hidden;
+  }
+
+  .renderAllDesc {
+    height: fit-content;
+  }
+
+  .company-description > h2 {
+    margin-top: 0;
+  }
+
+  .company-description > h3 {
+    margin-top: -8px;
+    margin-bottom: 8px;
+  }
+
+/******show more and back to top button*******/
+  .show-more {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: goldenrod;
+    margin-bottom: 15px;
+    font-size: 12px;
+    box-shadow: 0 2px 2px rgb(128, 128, 128, 0.7);
+    cursor: pointer;
+  }
+
+  .back-to-top {
+    height: 35px;
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(66, 65, 65, 0.8);
+    color: white;
+    cursor: pointer;
+  }
+
+  .back-to-top small {
+    font-size: 8px;
+  }
+
+  .btp-arrow {
+    font-size: 10px;
+  }
+
+  /* footer style */
+  footer {
+    background-color: rgb(66, 65, 65);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer .container {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+     "a b c d"
+     "e f f g"
+     "h h i i";
+     text-align: center;
+  }
+
+  footer .container small {
+    font-size: 8px;
+    opacity: 0.8;
+  }
+
+  .a {
+    grid-area: a;
+    opacity: 0.8;
+  }
+  .b {
+    grid-area: b;
+  }
+  .c {
+    grid-area: c;
+  }
+  .d {
+    grid-area: d;
+    text-align: start;
+  }
+  .e {
+    grid-area: e;
+  }
+  .f {
+    grid-area: f;
+  }
+  .g {
+    grid-area: g;
+  }
+  .h {
+    grid-area: h;
+  }
+  .i {
+    grid-area: i;
+  }
+  
+
+
+  footer .container > small {
+    font-size: 10px;
+    color: white;
+  }
+
+  #copy-right {
+    font-size: 10px;
+    color: white;
+    opacity: 0.5;
+    width: 100%;
+    text-align: center;
+    padding-top: 5px;
+    border-top: 1px solid rgb(255, 255, 255, 0.5);
+    margin-bottom: 0;
+  }
