@@ -61,7 +61,6 @@ header .hamburger {
   padding: 0 5px;
   margin: 0;
   position: relative;
-  font-size: 15px;
 }
 
 #search {
@@ -70,6 +69,7 @@ header .hamburger {
   width: 100%;
   border-radius: 13px;
   border: 1px solid black;
+  font-size: 16px;
 }
 
 #search::placeholder {
